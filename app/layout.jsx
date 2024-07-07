@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/malek mostafa.png" />
+        <link rel="icon" href="/logo.png" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

@@ -33,7 +33,7 @@ function Header() {
         <MobileMenu />
         <div className="logo flex items-center justify-center ">
           <span className="custom-font ml-5 md:text-[1.6rem] text-black">
-            <Image src={"/malek mostafa.png"} alt="logo" width={60} height={60} />
+            <Image src={"/logo.png"} alt="logo" width={60} height={60} />
           </span>
         </div>
         <div className="nav flex flex-row gap-[1.3rem] justify-center items-center">
