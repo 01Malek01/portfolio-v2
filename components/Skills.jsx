@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 function Skills() {
   return (
           <>
-    <section className="skills-wrapper mt-50  min-h-screen p-8">
-      <div className="skills-container">
+    <section className="skills-wrapper lg:min-h-screen p-8">
+        <div className="skills-container mt-[5rem]">
         <header className="skills-title p-5">
           <motion.h1
             initial={{ opacity: 0, y: -100 }}

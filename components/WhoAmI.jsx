@@ -5,20 +5,20 @@ import "../styles/WhoAmI.css";
 
 function WhoAmI() {
   return (
-    <section className="wai-wrapper md:p-10 rounded  min-h-screen flex items-center ">
-      <div className="wai-container flex flex-col md:flex-row md:justify-between  bg-black bg-opacity-10 w-full rounded-lg shadow-lg gap-5 ">
+    <section className="wai-wrapper md:p-10 rounded  md:min-h-screen flex items-center ">
+      <div className="wai-container mt-[5rem] md:mt-0 flex flex-col md:flex-row md:justify-between  bg-black bg-opacity-10 w-full rounded-lg shadow-lg gap-5 ">
         <motion.div
           initial={{ y: -70 }}
           animate={{ y: 0 }}
           transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-        className="wai-right md:flex hidden order-2 flex-1 mt-[-4rem]  flex-col gap-4 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
+        className="wai-right md:flex  md:order-2 flex-1  md:mt-[-4rem]  flex-col gap-4 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
         >
 
           <motion.div
             initial={{ y: 50 }}
             animate={{ y: 0 }}
             transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            className=" md:flex hidden order-2 flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
+            className=" md:flex  md:order-2 flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
 
           >
             {[' Innovation', ' Precision', ' Versatility'].map((word, index) => (

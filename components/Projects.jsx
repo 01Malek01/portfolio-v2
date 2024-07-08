@@ -30,9 +30,9 @@ function Projects() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.7, spring : 100 }}
           viewport={{ once: true }}
-          id="projects" className="projects-wrapper h-[100vh] flex flex-col relative items-center justify-center">
-          <h1 className="absolute top-[2rem] text-5xl font-bold c-text-secondary">Projects</h1>
-          <div className="projects-container flex flex-col gap-8 items-center justify-center mt-6">
+          id="projects" className="projects-wrapper h-[80vh] lg:h-[100vh] flex flex-col relative items-center justify-center">
+          <h1 className="absolute top-[5rem] lg:top-[8rem] text-5xl font-bold c-text-secondary">Projects</h1>
+          <div className="projects-container flex flex-col gap-8 items-center justify-center mt-5">
             <div className="projects-choice-title">
               <h1 className=" text-3xl text-center md:text-5xl text-white">What Would You Like To See?</h1>
               <p className="md:ml-2 mx-auto text-center c-text-secondary">Click to show the projects</p>

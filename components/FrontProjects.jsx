@@ -3,7 +3,7 @@ import { frontProjects } from '@/utils/front-end'
 import ProjectCard from './ProjectCard'
 function FrontProject({styles}) {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7  p-5 justify-center  ' >
+    <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-7  p-5 justify-center  ' >
       {frontProjects.map((project) => (
         <ProjectCard
           key={project.name}
