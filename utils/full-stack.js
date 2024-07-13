@@ -25,9 +25,11 @@ export const fullProjects = [
     githubLink: "https://github.com/01Malek01/chat-app-same-domain",
   },
   {
-    name: "Real Estate",
+    name: "Homyz-Real Estate",
     description:
-      "A full-stack real estate application with a React front end using Swiper for sliders and Framer Motion for animations. The back end is built with Node.js, Express, MongoDB, and Prisma. Features include authentication, authorization, adding residences to favorites, and booking residencies.",
-    image: "/projectsImages/dashboard.png",
+      "A full-stack real estate application built with the MERN stack, featuring animations with Framer Motion and UI components from Mantine. Authentication is handled using Auth0 SDKs. The back end is powered by Node.js, Express, MongoDB, and Prisma. Users can book visits to residencies or post their own, and Leaflet is used for maps. Key features include authentication, authorization, creating residences, and booking residencies.",
+    image: "/projectsImages/Screenshot 2024-07-13 114355.png",
+    liveLink: "https://fullstack-real-estate-one.vercel.app/",
+    githubLink: "https://github.com/01Malek01/fullstack-real-estate",
   },
 ];
