@@ -40,7 +40,7 @@ function Hero() {
           </p>
         </motion.div>
 
-        <div className="hero-btns-container space-y-1 mt-1 flex justify-between md:gap-2 lg:flex-row flex-col gap-1 items-center">
+        <div className="hero-btns-container mt-1 flex justify-between md:gap-2 lg:flex-row flex-col gap-1 items-center">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}

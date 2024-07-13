@@ -11,14 +11,14 @@ function WhoAmI() {
           initial={{ y: -70 }}
           animate={{ y: 0 }}
           transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-        className="wai-right md:flex  md:order-2 flex-1  md:mt-[-4rem]  flex-col gap-4 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
+        className="wai-right hidden  lg:flex  md:order-2 flex-1  md:mt-[-4rem]  flex-col gap-4 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
         >
 
           <motion.div
             initial={{ y: 50 }}
             animate={{ y: 0 }}
             transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            className=" md:flex  md:order-2 flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
+            className=" md:flex  md:order-2  flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
 
           >
             {[' Innovation', ' Precision', ' Versatility'].map((word, index) => (
