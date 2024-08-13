@@ -8,7 +8,7 @@ function Hero() {
   return (
     <section className="hero-wrapper relative md:h-[70vh] flex items-center justify-center">
       <div className="absolute top-0 left-0 right-0 bottom-0">
-        <LoopingIcons />
+        <LoopingIcons animation={'moveRandom'} />
       </div>
       <motion.div
       initial={{  opacity: 0 }}

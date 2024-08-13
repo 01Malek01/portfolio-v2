@@ -2,38 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/WhoAmI.css";
+import WaiAnimations from "./waiAnimations";
 
 function WhoAmI() {
   return (
     <section className="wai-wrapper md:p-10 rounded  md:min-h-screen flex items-center ">
       <div className="wai-container mt-[5rem] md:mt-0 flex flex-col md:flex-row md:justify-between  bg-black bg-opacity-10 w-full rounded-lg shadow-lg gap-5 ">
-        <motion.div
-          initial={{ y: -70 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-        className="wai-right hidden  lg:flex  md:order-2 flex-1  md:mt-[-4rem]  flex-col gap-4 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
-        >
 
-          <motion.div
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            className=" md:flex  md:order-2  flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0 "
 
-          >
-            {[' Innovation', ' Precision', ' Versatility'].map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, x: -200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.5, delay: index * 0.7 }}
-                className="word"
-              >
-              {word}
-              </motion.span>
-            ))}
-          </motion.div>
-        </motion.div>
+        <WaiAnimations />
 
         <motion.article
           initial={{ opacity: 0 }}
