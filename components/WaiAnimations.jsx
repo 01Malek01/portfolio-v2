@@ -9,7 +9,7 @@ function WaiAnimations() {
     initial={{ y: 50 }}
     animate={{ y: 0 }}
     transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-    className=" md:flex hidden  md:order-2  flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0  "
+    className=" lg:flex hidden  md:order-2  flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0  "
 
    >
 
