@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/WhoAmI.css";
-import WaiAnimations from "./waiAnimations";
+import WaiAnimations from "./WaiAnimations";
 
 function WhoAmI() {
   return (
