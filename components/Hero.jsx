@@ -7,14 +7,14 @@ import LoopingIcons from "./LoopingIcons";
 function Hero() {
   return (
     <section className="hero-wrapper relative md:h-[70vh] flex items-center justify-center">
-      <div className="absolute top-0 left-0 right-0 bottom-0">
-        <LoopingIcons animation={'moveRandom'} />
+      <div className="absolute top-0 left-0 right-0 bottom-0 z-[2]">
+        <LoopingIcons slice={10} animation={'moveRandom'} />
       </div>
       <motion.div
-      initial={{  opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 2.5 }}
-        className="hero-container  glass  min-h-screen  md:h-[80vh] relative flex flex-col items-center justify-center gap-1">
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2.5 }}
+        className="hero-container  glass z-[3]  min-h-screen  md:h-[80vh] relative flex flex-col items-center justify-center gap-1">
 
         <motion.div
           initial={{ translateY: -100, opacity: 0 }}
@@ -44,7 +44,7 @@ function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2}}
+            transition={{ duration: 2 }}
             viewport={{ once: true }}
             className="hero-btn-container md:mt-10 animate-pulse "
           >
@@ -53,9 +53,9 @@ function Hero() {
             </a>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0 , y: 100}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 2}}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
             viewport={{ once: true }}
             className="hero-btn-container md:mt-10 "
           >
