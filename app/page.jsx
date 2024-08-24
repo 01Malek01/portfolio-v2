@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -8,8 +7,8 @@ import Skills from "@/components/Skills";
 import WhoAmI from "@/components/WhoAmI";
 import Footer from '@/components/Footer';
 import { IoMdRocket } from "react-icons/io";
-
-
+import { Contact } from '@/components/Contact';
+import { easeInOut, useAnimation, motion } from 'framer-motion';
 
 export default function Home() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -35,15 +34,21 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <motion.main
+
+    >
       <Header />
       <Hero />
       <div id='who-am-i'>
         <WhoAmI />
       </div>
-      <div id='skills'>
+      <motion.div
+
+        id="skills"
+      >
         <Skills />
-      </div>
+      </motion.div>
+
       <div id="projects">
         <Projects />
       </div>
@@ -51,12 +56,12 @@ export default function Home() {
         <Contact />
       </div>
       {showScrollToTop && (
-        <button className="scroll-to-top text-sm flex flex-col hover:text-[#FFD700] hover:scale-125 transition-all tracking-tight" onClick={scrollToTop}>
+        <button className="scroll-to-top text-sm flex flex-col hover:text-purple-700 hover:scale-125 transition-all tracking-tight" onClick={scrollToTop}>
           <IoMdRocket size={50} />
           <span className='text-sm'>Top</span>
         </button>
       )}
       <Footer />
-    </main>
+    </motion.main>
   );
 }

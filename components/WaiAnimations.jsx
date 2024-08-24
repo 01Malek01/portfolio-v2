@@ -1,6 +1,7 @@
 import React from 'react'
 import LoopingIcons from './LoopingIcons'
 import { motion } from 'framer-motion'
+import { BorderBeam } from './magicui/border-beam'
 
 function WaiAnimations() {
  return (
@@ -9,11 +10,11 @@ function WaiAnimations() {
     initial={{ y: 50 }}
     animate={{ y: 0 }}
     transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-    className=" lg:flex hidden  md:order-2  flex-1 p-2 flex-col gap-4 mt-3 text-[4rem] outline items-center rounded-lg w-fit outline-[#FFD700] text-slate-200 right-0  "
+    className="relative lg:flex hidden  md:order-2 overflow-hidden  flex-1 p-2 flex-col gap-4 mt-3 text-[4rem]  items-center rounded-lg w-fit  text-slate-200 right-0  "
 
    >
 
-    <LoopingIcons slice={3}  animation={'move'}/>
+    <LoopingIcons slice={3} animation={'move'} />
     {[' Innovation', ' Precision', ' Versatility'].map((word, index) => (
      <motion.span
       key={index}
@@ -25,6 +26,8 @@ function WaiAnimations() {
       {word}
      </motion.span>
     ))}
+    <BorderBeam size={800} duration={12} delay={9} />
+
    </motion.div>
   </>
  )

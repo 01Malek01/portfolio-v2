@@ -103,7 +103,7 @@ function LoopingIcons({ slice, animation }) {
   <div className="loop md:h-[500px] md:w-[500px]">
    {[FaHtml5, FaCss3Alt, FaJs, SiTailwindcss, FaReact, SiNextdotjs, FaNodeJs, SiExpress, SiMongodb, SiMongoose].map((Icon, index) => (
     <div key={index} ref={addToRefs} className="icon-container -z-10">
-     <Icon size={screenWidthLessThan768 ? 50 : 100} className='icon' />
+       <Icon color='#252525' size={screenWidthLessThan768 ? 50 : 100} className='icon -z-10 opacity-80' />
     </div>
    )).slice(0, slice)}
   </div>

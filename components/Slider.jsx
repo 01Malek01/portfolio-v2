@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
@@ -18,6 +18,8 @@ const MySwiperComponent = () => {
  return (
 
   <Swiper
+
+
    breakpoints={{
     640: {
      slidesPerView: 1
@@ -31,7 +33,7 @@ const MySwiperComponent = () => {
    }}
    modules={[Autoplay]}
    autoplay={{
-    delay: 1500,
+    delay: 2000,
     disableOnInteraction: false,
    }}
    loop={true}
@@ -69,20 +71,21 @@ const SlideNextButton = () => {
  const swiper = useSwiper();
  return (
   <div className="flex gap-4 m-10 ">
-   <motion.button 
-   initial={{ opacity: 0, x: 40 }}
-   whileInView={{ opacity: 1, x: 0 }}
-   transition={{ duration: 1.5 ,delay: 0.8 }}
-   viewport={{ once: true }}
-    
-   onClick={() => swiper.slidePrev()} className="btn btn-active bg-[#FFD700] hover:scale-[1.1] ">
+   <motion.button
+    initial={{ opacity: 0, x: 40 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1.5, delay: 0.8 }}
+    viewport={{ once: true }}
+    className=" rounded-lg p-1 bg-[#FFD700] hover:scale-[1.1]"
+
+    onClick={() => swiper.slidePrev()} >
     <FaChevronLeft className="text-3xl " />
    </motion.button>
    <motion.button
     initial={{ opacity: 0, x: -40 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 1.5, delay: 1.2 }}
-    viewport={{ once: true }} onClick={() => swiper.slideNext()} className="btn btn-active bg-[#FFD700] hover:scale-[1.1]">
+    viewport={{ once: true }} onClick={() => swiper.slideNext()} className=" rounded-lg p-1 bg-[#FFD700] hover:scale-[1.1]">
     <FaChevronRight className="text-3xl " />
    </motion.button>
   </div>

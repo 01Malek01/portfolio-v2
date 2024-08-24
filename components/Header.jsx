@@ -1,6 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from "react";
-import "../styles/Header.css";
+import React, { useEffect } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
@@ -8,78 +7,72 @@ import MobileMenu from "./MobileMenu";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
 function Header() {
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
       });
-    }, []);
-  })
-
-
-
+    });
+  }, []);
 
   return (
-    <div className="header-wrapper ">
-
-      <div className="header-container grid grid-cols-12 items-center  bg-[#53535371] h-[60px] justify-between w-full fixed top-0 z-50">
-
+    <header className="bg-gray-800 text-white shadow-md fixed top-0 w-full z-50">
+      <div className="container mx-auto flex items-center justify-between h-16 px-6 lg:px-12">
+        {/* Mobile Menu */}
         <MobileMenu />
-        <div className="logo flex items-center justify-center col-span-2  ">
-          <span className="custom-font ml-5 md:text-[1.6rem] text-black">
-            <Image src={"/logo.png"} alt="logo" width={60} height={60} />
-          </span>
+
+        {/* Logo */}
+        <div className="flex items-center">
+          <Image src="/logo.png" alt="logo" width={60} height={60} className="rounded-full border border-white" />
         </div>
-        <div className="nav flex flex-row gap-[1.3rem] justify-center items-center self-center col-span-8">
+
+        {/* Navigation Links */}
+        <nav className="hidden lg:flex flex-grow justify-center gap-8">
           {[
-            { href: '#who-am-i', label: 'Who am I ?' },
+            { href: '#who-am-i', label: 'Who am I?' },
             { href: '#skills', label: 'Skills' },
             { href: '#projects', label: 'Projects' },
             { href: '#contact', label: 'Contact me' }
           ].map((link, index) => (
-            <Link key={link.href} href={link.href} className="">
+            <Link key={link.href} href={link.href} className="relative group">
               <motion.div
-                initial={{ opacity: 0, y: -100 }}
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: index * 0.2 }}
-                className=" font-bold link hover:animate-pulse rounded-full p-2 flex items-center justify-center ">
-                <motion.span
-                  transition={{ duration: 0.3 }}
-                  whileHover={{ y: -5 }}
-                >
-                  {link.label}
-                </motion.span>
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="font-semibold text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-purple-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </motion.div>
+            </Link>
+          ))}
+        </nav>
+
+        {/* Social Links */}
+        <div className="flex gap-6">
+          {[
+            { href: 'https://github.com/01Malek01', icon: <BsGithub className="text-xl hover:text-purple-700 transition-colors duration-300" /> },
+            { href: 'https://www.linkedin.com/in/malek-mostafa-salah-026362222/', icon: <BsLinkedin className="text-xl hover:text-purple-700 transition-colors duration-300" /> },
+            { href: 'mailto:malekmostafa0051@gmail.com', icon: <HiOutlineMail className="text-xl hover:text-purple-700 transition-colors duration-300" /> }
+          ].map((link) => (
+            <Link key={link.href} href={link.href} className="hover:scale-110 transition-transform duration-300">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-gray-300"
+              >
+                {link.icon}
               </motion.div>
             </Link>
           ))}
         </div>
-        <div className="accounts flex flex-row gap-7 justify-center items-center mr-5  col-span-2">
-          {
-            [
-              { href: 'https://github.com/01Malek01', label: 'Github', icon: <BsGithub className="text-[25px] link" /> },
-              { href: 'https://www.linkedin.com/in/malek-mostafa-salah-026362222/', label: 'Linkedin', icon: <BsLinkedin className="text-[25px] link" /> },
-              { href: 'mailto:malekmostafa0051@gmail.com', label: 'Email', icon: <HiOutlineMail className="text-[25px] link" /> },].map((link, index) => (
-                <Link key={link.href} href={link.href} className="hover:scale-125">
-                  <motion.div
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: index * 0.2 }}
-                    className=" font-bold link">
-                    {link.icon}
-                  </motion.div>
-                </Link>
-              ))
-          }
-
-        </div>
       </div>
-    </div>
+    </header>
   );
 }
 
